@@ -1,3 +1,12 @@
+use clap::Parser;
+
+mod args;
+use args::*;
+
 fn main() {
-    println!("Hello, world!");
+    let cli = CLI::parse();
+
+    match cli.command {
+        Commands::GenerateContract {} => println!("ava"),
+    };
 }
