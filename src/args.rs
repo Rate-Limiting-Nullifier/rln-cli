@@ -10,5 +10,5 @@ pub struct CLI {
 
 #[derive(Subcommand)]
 pub enum Commands {
-    GenerateContract {},
+    GenerateContract,
 }
