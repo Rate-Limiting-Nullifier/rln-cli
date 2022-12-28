@@ -8,7 +8,7 @@
 
 ## How to use
 ```bash
-cargo run -- help
+cargo run --release -- help
 ```
 
 ```bash

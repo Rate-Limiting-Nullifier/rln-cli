@@ -1,4 +1,7 @@
 #![allow(clippy::upper_case_acronyms)]
+
+use std::path::PathBuf;
+
 use clap::{Parser, Subcommand};
 
 #[derive(Parser)]
@@ -11,4 +14,6 @@ pub struct CLI {
 #[derive(Subcommand)]
 pub enum Commands {
     GenerateContract,
+    GenerateProof { path: PathBuf },
+    VerifyProof { path: PathBuf },
 }
