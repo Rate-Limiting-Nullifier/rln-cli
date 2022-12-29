@@ -3,7 +3,7 @@ use std::io::{Cursor, Read, Write};
 
 use clap::Parser;
 
-use rln::{
+use zerokit_rln::{
     protocol::{
         proof_values_from_witness, random_rln_witness, serialize_proof_values, serialize_witness,
     },
