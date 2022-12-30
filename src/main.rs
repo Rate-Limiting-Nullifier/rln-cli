@@ -17,8 +17,10 @@ fn main() {
     let cli = CLI::parse();
 
     match cli.command {
-        Commands::GenerateContract => println!("ava"),
-        Commands::GenerateProof { path } => {
+        Commands::Contract => println!("contract"),
+        Commands::Circuit => println!("circuit"),
+        Commands::Webapp => println!("webapp"),
+        Commands::Prove { path } => {
             let tree_height = 20;
             let resources = Cursor::new("./temp/");
 
@@ -41,7 +43,7 @@ fn main() {
 
             File::create(path).unwrap().write_all(&verify_data).unwrap();
         }
-        Commands::VerifyProof { path } => {
+        Commands::Verify { path } => {
             let tree_height = 20;
             let resources = Cursor::new("./temp/");
 

@@ -4,8 +4,12 @@ use std::path::PathBuf;
 
 use clap::{Parser, Subcommand};
 
+use rln::engine;
+
 #[derive(Parser)]
-#[clap(name = "Rate Limiting Nullifier CLI", version = "0.1")]
+#[clap(name = "Rate Limit Nullifier CLI", version = "0.1")]
+#[command(about = engine::utils::RLN_ASCII)]
+#[command(disable_help_subcommand = true)]
 pub struct CLI {
     #[clap(subcommand)]
     pub command: Commands,
@@ -13,7 +17,14 @@ pub struct CLI {
 
 #[derive(Subcommand)]
 pub enum Commands {
-    GenerateContract,
-    GenerateProof { path: PathBuf },
-    VerifyProof { path: PathBuf },
+    #[command(about = "Generates smart-contract")]
+    Contract,
+    #[command(about = "Generates circuit")]
+    Circuit,
+    #[command(about = "Generates webapp template")]
+    Webapp,
+    #[command(about = "Generates proof")]
+    Prove { path: PathBuf },
+    #[command(about = "Verifies given RLN zk-proof")]
+    Verify { path: PathBuf },
 }
