@@ -7,25 +7,33 @@
 <h3 align="center">CLI for RLN in Rust</h3>
 
 ## How to use
+
 ```bash
-cargo run --release -- help
+cargo run --release
 ```
 
 ```bash
-Usage: rln-cli <COMMAND>
+_______   __        __    __ 
+|       \ |  \      |  \  |  \
+| $$$$$$$\| $$      | $$\ | $$
+| $$__| $$| $$      | $$$\| $$
+| $$    $$| $$      | $$$$\ $$
+| $$$$$$$\| $$      | $$\$$ $$
+| $$  | $$| $$_____ | $$ \$$$$
+| $$  | $$| $$     \| $$  \$$$
+ \$$   \$$ \$$$$$$$$ \$$   \$$
+
+
+Usage: rln <COMMAND>
 
 Commands:
-  generate-contract  
-  help               Print this message or the help of the given subcommand(s)
+  contract  Generates smart-contract
+  circuit   Generates circuit
+  webapp    Generates webapp template
+  prove     Generates proof
+  verify    Verifies given RLN zk-proof
 
 Options:
   -h, --help     Print help information
   -V, --version  Print version information
 ```
-
-## What's next
-
-* Zerokit integration
-* Generate pre-compiled circuits
-* Generate smart-contract
-* Generate RLN Project
