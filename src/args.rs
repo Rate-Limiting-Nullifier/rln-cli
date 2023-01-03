@@ -4,7 +4,7 @@ use std::path::PathBuf;
 
 use clap::{Parser, Subcommand};
 
-use rln::engine;
+use crate::engine;
 
 #[derive(Parser)]
 #[clap(name = "Rate Limit Nullifier CLI", version = "0.1")]

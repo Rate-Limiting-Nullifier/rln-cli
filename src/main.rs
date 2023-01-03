@@ -10,8 +10,7 @@ use zerokit_rln::{
     public::RLN,
 };
 
-mod args;
-use args::*;
+use rln::args::*;
 
 fn main() {
     let cli = CLI::parse();
