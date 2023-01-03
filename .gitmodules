@@ -1,3 +1,0 @@
-[submodule "resources/vendor"]
-	path = resources/vendor
-	url = https://github.com/vacp2p/rln-contract
