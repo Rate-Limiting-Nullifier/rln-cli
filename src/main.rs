@@ -11,12 +11,16 @@ use zerokit_rln::{
 };
 
 use rln::args::*;
+use rln::engine::contract::contract;
 
 fn main() {
     let cli = CLI::parse();
 
     match cli.command {
-        Commands::Contract => println!("contract"),
+        Commands::Contract => {
+            println!("Generated smart-contract");
+            contract();
+        }
         Commands::Circuit => println!("circuit"),
         Commands::Webapp => println!("webapp"),
         Commands::Prove { path } => {

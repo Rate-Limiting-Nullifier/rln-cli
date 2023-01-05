@@ -4,5 +4,6 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+fs_extra = "1.2.0"
 clap = { version = "4.0.29", features = ["derive"] }
 zerokit-rln = { package = "rln", git = "https://github.com/vacp2p/zerokit", rev = "005393d" }
