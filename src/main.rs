@@ -17,9 +17,8 @@ fn main() {
     let cli = CLI::parse();
 
     match cli.command {
-        Commands::Contract => {
-            println!("Generated smart-contract");
-            contract();
+        Commands::Contract { depth, deposit } => {
+            contract(depth, deposit);
         }
         Commands::Circuit => println!("circuit"),
         Commands::Webapp => println!("webapp"),

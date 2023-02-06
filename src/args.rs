@@ -18,7 +18,7 @@ pub struct CLI {
 #[derive(Subcommand)]
 pub enum Commands {
     #[command(about = "Generates smart-contract")]
-    Contract,
+    Contract { depth: u8, deposit: u128 },
     #[command(about = "Generates circuit")]
     Circuit,
     #[command(about = "Generates webapp template")]
