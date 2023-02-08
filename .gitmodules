@@ -1,1 +1,5 @@
 
+[submodule "resources/vendor/rln-contract"]
+	path = resources/vendor/rln-contract
+	url = https://github.com/Rate-Limiting-Nullifier/rln-contract
+	branch = placeholders
